@@ -12,5 +12,6 @@
 */
 
 $router->get('/', function () use ($router) {
+    // dd(app('config')->get('database'));
     return $router->app->version();
 });

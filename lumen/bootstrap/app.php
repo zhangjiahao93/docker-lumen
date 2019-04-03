@@ -20,6 +20,9 @@ require_once __DIR__.'/../vendor/autoload.php';
 $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
+//注入数据库配置：目录 config/database.php
+$app->configure('database');
+
 
 // $app->withFacades();
 
