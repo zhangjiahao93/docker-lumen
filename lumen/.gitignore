@@ -1,0 +1,15 @@
+/.idea
+/.vscode
+/.DS_Store
+/runtime
+Homestead.json
+Homestead.yaml
+.env
+/test.php
+/.env-*
+docker-compose.yml
+/platform/vendor
+/data
+/vendor
+/nbproject
+tests/_reports/
