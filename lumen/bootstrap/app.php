@@ -22,11 +22,11 @@ $app = new Laravel\Lumen\Application(
 );
 //注入数据库配置：目录 config/database.php
 $app->configure('database');
+$app->configure('auth');
 
+$app->withFacades();
 
-// $app->withFacades();
-
-// $app->withEloquent();
+$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -82,6 +82,8 @@ $app->routeMiddleware([
 // $app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+
+$app->register(Laravel\Passport\PassportServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------

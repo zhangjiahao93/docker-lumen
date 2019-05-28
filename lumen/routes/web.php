@@ -12,7 +12,6 @@
 */
 
 $router->get('/', function () use ($router) {
-    // dd(app('config')->get('database'));
     return $router->app->version();
 });
 
@@ -21,9 +20,13 @@ $router->get('user/{id}/profile', ['as' => 'profile', function ($id) {
     dd($url);
 }]);
 
+$router->post('login',  function () use ($router) {
+    return $router->app->version();
+});
+
 $router->group(['middleware' => 'auth'], function () use ($router) {
     $router->get('/post/{id}', function (Request $request, $id) {
-        dd($id);
+        
     });
 
     $router->get('user/profile', function () {
